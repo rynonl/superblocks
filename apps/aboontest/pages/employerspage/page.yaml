@@ -39,8 +39,8 @@ layouts:
             SingleEmployer:
               - AllEmployers
           apiNames:
-            - AllEmployers
             - SingleEmployer
+            - AllEmployers
       canExtend: true
       children:
         - canExtend: true
@@ -86,244 +86,6 @@ layouts:
                       useLabelAsDisplayValue: true
                       verticalAlignment: CENTER
                       width: 150
-                    date_joined:
-                      columnType: date
-                      computedValue: "{{EmployersTable.tableDataWithInserts.map((currentRow) => {
-                        return currentRow.date_joined })}}"
-                      enableFilter: true
-                      enableSort: true
-                      headerIconPosition: LEFT
-                      horizontalAlignment: LEFT
-                      id: date_joined
-                      imageBorderRadius:
-                        mode: px
-                        value: 0
-                      imageSize: FIT
-                      index: 2
-                      inputFormat: YYYY-MM-DD
-                      isDerived: false
-                      isEditableOnInsertion: true
-                      isVisible: true
-                      label: date joined
-                      linkLabel: "{{EmployersTable.tableDataWithInserts.map((currentRow) => { return
-                        currentRow.date_joined })}}"
-                      linkUrl: "{{EmployersTable.tableDataWithInserts.map((currentRow) => { return
-                        currentRow.date_joined })}}"
-                      notation: standard
-                      openImageUrl: true
-                      openInNewTab: true
-                      outputFormat: MM-DD-YYYY
-                      tagDisplayConfig: {}
-                      textSize: PARAGRAPH
-                      useLabelAsDisplayValue: true
-                      verticalAlignment: CENTER
-                      width: 150
-                    photo:
-                      columnType: image
-                      computedValue: "{{EmployersTable.tableDataWithInserts.map((currentRow) => {
-                        return currentRow.photo })}}"
-                      enableFilter: true
-                      enableSort: true
-                      headerIconPosition: LEFT
-                      horizontalAlignment: LEFT
-                      id: photo
-                      imageBorderRadius:
-                        mode: "%"
-                        value: 50
-                      imageSize: FIXED
-                      index: 3
-                      isDerived: false
-                      isEditableOnInsertion: true
-                      isVisible: true
-                      label: photo
-                      linkLabel: "{{EmployersTable.tableDataWithInserts.map((currentRow) => { return
-                        currentRow.photo })}}"
-                      linkUrl: "{{EmployersTable.tableDataWithInserts.map((currentRow) => { return
-                        currentRow.photo })}}"
-                      notation: standard
-                      openImageUrl: true
-                      openInNewTab: true
-                      tagDisplayConfig: {}
-                      textSize: PARAGRAPH
-                      useLabelAsDisplayValue: true
-                      verticalAlignment: CENTER
-                      width: 150
-                    twitter:
-                      columnType: link
-                      computedValue: "{{EmployersTable.tableDataWithInserts.map((currentRow) => {
-                        return currentRow.twitter })}}"
-                      enableFilter: true
-                      enableSort: true
-                      headerIconPosition: LEFT
-                      horizontalAlignment: LEFT
-                      id: twitter
-                      imageBorderRadius:
-                        mode: px
-                        value: 0
-                      imageSize: FIT
-                      index: 1
-                      isDerived: false
-                      isEditableOnInsertion: true
-                      isVisible: true
-                      label: twitter
-                      linkLabel: "{{EmployersTable.tableDataWithInserts.map((currentRow) => { return
-                        '@' + currentRow.twitter?.split('/').pop()})}}"
-                      linkUrl: "{{EmployersTable.tableDataWithInserts.map((currentRow) => { return
-                        currentRow.twitter })}}"
-                      notation: standard
-                      openImageUrl: true
-                      openInNewTab: true
-                      tagDisplayConfig: {}
-                      textSize: PARAGRAPH
-                      useLabelAsDisplayValue: true
-                      verticalAlignment: CENTER
-                      width: 150
-                  cellProps:
-                    textStyle:
-                      variant: body2
-                  collapseWhenHidden: true
-                  columnOrder:
-                    - business_tax_structure_id
-                    - company_nickname
-                    - legal_name
-                    - created_at
-                    - created_by_id
-                    - ein
-                    - external_workos_org_id
-                    - fiscal_tax_year_end_date_id
-                    - id
-                    - incorporation_state_id
-                    - industry_id
-                    - other_payroll_provider_name
-                    - partner_id
-                    - partner_team_id
-                    - payroll_frequency_id
-                    - payroll_provider_id
-                    - phone
-                    - primary_contact_id
-                    - updated_at
-                    - customColumn1
-                  compactMode: SHORT
-                  defaultFilters: "{}"
-                  defaultSelectedRow: "0"
-                  derivedColumns:
-                    customColumn1:
-                      buttonLabel: "{{EmployersTable.tableDataWithInserts.map((currentRow) => { return
-                        'Open'})}}"
-                      columnType: button
-                      computedValue: ""
-                      enableFilter: true
-                      enableSort: true
-                      headerIconPosition: LEFT
-                      horizontalAlignment: LEFT
-                      id: customColumn1
-                      imageBorderRadius:
-                        mode: px
-                        value: 0
-                      imageSize: FIT
-                      index: 19
-                      isDerived: true
-                      isEditableOnInsertion: true
-                      isVisible: true
-                      label: Open
-                      linkLabel: ""
-                      linkUrl: ""
-                      notation: standard
-                      onClick:
-                        - id: 2e0mmpvimj
-                          name: EmployerModal
-                          type: controlModal
-                        - apiNames:
-                            - SingleEmployer
-                          id: sk1smrmy66
-                          type: executeApi
-                      openImageUrl: true
-                      openInNewTab: true
-                      tagDisplayConfig: {}
-                      textSize: PARAGRAPH
-                      useLabelAsDisplayValue: true
-                      verticalAlignment: CENTER
-                      width: 150
-                  dynamicBindingPathList:
-                    - key: tableData
-                    - key: primaryColumns.business_tax_structure_id.computedValue
-                    - key: primaryColumns.business_tax_structure_id.linkUrl
-                    - key: primaryColumns.business_tax_structure_id.linkLabel
-                    - key: primaryColumns.company_nickname.computedValue
-                    - key: primaryColumns.company_nickname.linkUrl
-                    - key: primaryColumns.company_nickname.linkLabel
-                    - key: primaryColumns.created_at.computedValue
-                    - key: primaryColumns.created_at.linkUrl
-                    - key: primaryColumns.created_at.linkLabel
-                    - key: primaryColumns.created_by_id.computedValue
-                    - key: primaryColumns.created_by_id.linkUrl
-                    - key: primaryColumns.created_by_id.linkLabel
-                    - key: primaryColumns.ein.computedValue
-                    - key: primaryColumns.ein.linkUrl
-                    - key: primaryColumns.ein.linkLabel
-                    - key: primaryColumns.external_workos_org_id.computedValue
-                    - key: primaryColumns.external_workos_org_id.linkUrl
-                    - key: primaryColumns.external_workos_org_id.linkLabel
-                    - key: primaryColumns.fiscal_tax_year_end_date_id.computedValue
-                    - key: primaryColumns.fiscal_tax_year_end_date_id.linkUrl
-                    - key: primaryColumns.fiscal_tax_year_end_date_id.linkLabel
-                    - key: primaryColumns.id.computedValue
-                    - key: primaryColumns.id.linkUrl
-                    - key: primaryColumns.id.linkLabel
-                    - key: primaryColumns.incorporation_state_id.computedValue
-                    - key: primaryColumns.incorporation_state_id.linkUrl
-                    - key: primaryColumns.incorporation_state_id.linkLabel
-                    - key: primaryColumns.industry_id.computedValue
-                    - key: primaryColumns.industry_id.linkUrl
-                    - key: primaryColumns.industry_id.linkLabel
-                    - key: primaryColumns.legal_name.computedValue
-                    - key: primaryColumns.legal_name.linkUrl
-                    - key: primaryColumns.legal_name.linkLabel
-                    - key: primaryColumns.other_payroll_provider_name.computedValue
-                    - key: primaryColumns.other_payroll_provider_name.linkUrl
-                    - key: primaryColumns.other_payroll_provider_name.linkLabel
-                    - key: primaryColumns.partner_id.computedValue
-                    - key: primaryColumns.partner_id.linkUrl
-                    - key: primaryColumns.partner_id.linkLabel
-                    - key: primaryColumns.partner_team_id.computedValue
-                    - key: primaryColumns.partner_team_id.linkUrl
-                    - key: primaryColumns.partner_team_id.linkLabel
-                    - key: primaryColumns.payroll_frequency_id.computedValue
-                    - key: primaryColumns.payroll_frequency_id.linkUrl
-                    - key: primaryColumns.payroll_frequency_id.linkLabel
-                    - key: primaryColumns.payroll_provider_id.computedValue
-                    - key: primaryColumns.payroll_provider_id.linkUrl
-                    - key: primaryColumns.payroll_provider_id.linkLabel
-                    - key: primaryColumns.phone.computedValue
-                    - key: primaryColumns.phone.linkUrl
-                    - key: primaryColumns.phone.linkLabel
-                    - key: primaryColumns.primary_contact_id.computedValue
-                    - key: primaryColumns.primary_contact_id.linkUrl
-                    - key: primaryColumns.primary_contact_id.linkLabel
-                    - key: primaryColumns.updated_at.computedValue
-                    - key: primaryColumns.updated_at.linkUrl
-                    - key: primaryColumns.updated_at.linkLabel
-                    - key: derivedColumns.customColumn1.buttonLabel
-                    - key: primaryColumns.customColumn1.buttonLabel
-                  dynamicTriggerPathList:
-                    - key: primaryColumns.customColumn1.onClick
-                  gridColumns: 85
-                  height:
-                    mode: gridUnit
-                    value: 42
-                  horizontalAlignment: LEFT
-                  isDownloadable: true
-                  isFilterable: true
-                  isLoading: false
-                  isSearchable: true
-                  isVisible: true
-                  label: Data
-                  left:
-                    mode: gridUnit
-                    value: 0
-                  pageType: NONE
-                  parentId: dwpvpsnarl
-                  primaryColumns:
                     business_tax_structure_id:
                       columnType: text
                       computedValue: "{{EmployersTable.tableDataWithInserts.map((currentRow) => {
@@ -346,36 +108,6 @@ layouts:
                         currentRow.business_tax_structure_id })}}"
                       linkUrl: "{{EmployersTable.tableDataWithInserts.map((currentRow) => { return
                         currentRow.business_tax_structure_id })}}"
-                      notation: standard
-                      openImageUrl: true
-                      openInNewTab: true
-                      tagDisplayConfig: {}
-                      textSize: PARAGRAPH
-                      useLabelAsDisplayValue: true
-                      verticalAlignment: CENTER
-                      width: 150
-                    company_nickname:
-                      columnType: text
-                      computedValue: "{{EmployersTable.tableDataWithInserts.map((currentRow) => {
-                        return currentRow.company_nickname })}}"
-                      enableFilter: true
-                      enableSort: true
-                      headerIconPosition: LEFT
-                      horizontalAlignment: LEFT
-                      id: company_nickname
-                      imageBorderRadius:
-                        mode: px
-                        value: 0
-                      imageSize: FIT
-                      index: 1
-                      isDerived: false
-                      isEditableOnInsertion: true
-                      isVisible: true
-                      label: company_nickname
-                      linkLabel: "{{EmployersTable.tableDataWithInserts.map((currentRow) => { return
-                        currentRow.company_nickname })}}"
-                      linkUrl: "{{EmployersTable.tableDataWithInserts.map((currentRow) => { return
-                        currentRow.company_nickname })}}"
                       notation: standard
                       openImageUrl: true
                       openInNewTab: true
@@ -444,38 +176,33 @@ layouts:
                       useLabelAsDisplayValue: true
                       verticalAlignment: CENTER
                       width: 150
-                    customColumn1:
-                      buttonLabel: "{{EmployersTable.tableDataWithInserts.map((currentRow) => { return
-                        'Open'})}}"
-                      columnType: button
-                      computedValue: ""
+                    date_joined:
+                      columnType: date
+                      computedValue: "{{EmployersTable.tableDataWithInserts.map((currentRow) => {
+                        return currentRow.date_joined })}}"
                       enableFilter: true
                       enableSort: true
                       headerIconPosition: LEFT
                       horizontalAlignment: LEFT
-                      id: customColumn1
+                      id: date_joined
                       imageBorderRadius:
                         mode: px
                         value: 0
                       imageSize: FIT
-                      index: 19
-                      isDerived: true
+                      index: 2
+                      inputFormat: YYYY-MM-DD
+                      isDerived: false
                       isEditableOnInsertion: true
                       isVisible: true
-                      label: Open
-                      linkLabel: ""
-                      linkUrl: ""
+                      label: date joined
+                      linkLabel: "{{EmployersTable.tableDataWithInserts.map((currentRow) => { return
+                        currentRow.date_joined })}}"
+                      linkUrl: "{{EmployersTable.tableDataWithInserts.map((currentRow) => { return
+                        currentRow.date_joined })}}"
                       notation: standard
-                      onClick:
-                        - id: 2e0mmpvimj
-                          name: EmployerModal
-                          type: controlModal
-                        - apiNames:
-                            - SingleEmployer
-                          id: sk1smrmy66
-                          type: executeApi
                       openImageUrl: true
                       openInNewTab: true
+                      outputFormat: MM-DD-YYYY
                       tagDisplayConfig: {}
                       textSize: PARAGRAPH
                       useLabelAsDisplayValue: true
@@ -661,36 +388,6 @@ layouts:
                       useLabelAsDisplayValue: true
                       verticalAlignment: CENTER
                       width: 150
-                    legal_name:
-                      columnType: text
-                      computedValue: "{{EmployersTable.tableDataWithInserts.map((currentRow) => {
-                        return currentRow.legal_name })}}"
-                      enableFilter: true
-                      enableSort: true
-                      headerIconPosition: LEFT
-                      horizontalAlignment: LEFT
-                      id: legal_name
-                      imageBorderRadius:
-                        mode: px
-                        value: 0
-                      imageSize: FIT
-                      index: 10
-                      isDerived: false
-                      isEditableOnInsertion: true
-                      isVisible: true
-                      label: legal_name
-                      linkLabel: "{{EmployersTable.tableDataWithInserts.map((currentRow) => { return
-                        currentRow.legal_name })}}"
-                      linkUrl: "{{EmployersTable.tableDataWithInserts.map((currentRow) => { return
-                        currentRow.legal_name })}}"
-                      notation: standard
-                      openImageUrl: true
-                      openInNewTab: true
-                      tagDisplayConfig: {}
-                      textSize: PARAGRAPH
-                      useLabelAsDisplayValue: true
-                      verticalAlignment: CENTER
-                      width: 150
                     other_payroll_provider_name:
                       columnType: text
                       computedValue: "{{EmployersTable.tableDataWithInserts.map((currentRow) => {
@@ -841,28 +538,28 @@ layouts:
                       useLabelAsDisplayValue: true
                       verticalAlignment: CENTER
                       width: 150
-                    phone:
-                      columnType: text
+                    photo:
+                      columnType: image
                       computedValue: "{{EmployersTable.tableDataWithInserts.map((currentRow) => {
-                        return currentRow.phone })}}"
+                        return currentRow.photo })}}"
                       enableFilter: true
                       enableSort: true
                       headerIconPosition: LEFT
                       horizontalAlignment: LEFT
-                      id: phone
+                      id: photo
                       imageBorderRadius:
-                        mode: px
-                        value: 0
-                      imageSize: FIT
-                      index: 16
+                        mode: "%"
+                        value: 50
+                      imageSize: FIXED
+                      index: 3
                       isDerived: false
                       isEditableOnInsertion: true
                       isVisible: true
-                      label: phone
+                      label: photo
                       linkLabel: "{{EmployersTable.tableDataWithInserts.map((currentRow) => { return
-                        currentRow.phone })}}"
+                        currentRow.photo })}}"
                       linkUrl: "{{EmployersTable.tableDataWithInserts.map((currentRow) => { return
-                        currentRow.phone })}}"
+                        currentRow.photo })}}"
                       notation: standard
                       openImageUrl: true
                       openInNewTab: true
@@ -871,28 +568,28 @@ layouts:
                       useLabelAsDisplayValue: true
                       verticalAlignment: CENTER
                       width: 150
-                    primary_contact_id:
-                      columnType: text
+                    twitter:
+                      columnType: link
                       computedValue: "{{EmployersTable.tableDataWithInserts.map((currentRow) => {
-                        return currentRow.primary_contact_id })}}"
+                        return currentRow.twitter })}}"
                       enableFilter: true
                       enableSort: true
                       headerIconPosition: LEFT
                       horizontalAlignment: LEFT
-                      id: primary_contact_id
+                      id: twitter
                       imageBorderRadius:
                         mode: px
                         value: 0
                       imageSize: FIT
-                      index: 17
+                      index: 1
                       isDerived: false
                       isEditableOnInsertion: true
                       isVisible: true
-                      label: primary_contact_id
+                      label: twitter
                       linkLabel: "{{EmployersTable.tableDataWithInserts.map((currentRow) => { return
-                        currentRow.primary_contact_id })}}"
+                        '@' + currentRow.twitter?.split('/').pop()})}}"
                       linkUrl: "{{EmployersTable.tableDataWithInserts.map((currentRow) => { return
-                        currentRow.primary_contact_id })}}"
+                        currentRow.twitter })}}"
                       notation: standard
                       openImageUrl: true
                       openInNewTab: true
@@ -923,6 +620,317 @@ layouts:
                         currentRow.updated_at })}}"
                       linkUrl: "{{EmployersTable.tableDataWithInserts.map((currentRow) => { return
                         currentRow.updated_at })}}"
+                      notation: standard
+                      openImageUrl: true
+                      openInNewTab: true
+                      tagDisplayConfig: {}
+                      textSize: PARAGRAPH
+                      useLabelAsDisplayValue: true
+                      verticalAlignment: CENTER
+                      width: 150
+                  cellProps:
+                    textStyle:
+                      variant: body2
+                  collapseWhenHidden: true
+                  columnOrder:
+                    - company_nickname
+                    - first_name
+                    - legal_name
+                    - last_name
+                    - email
+                    - phone
+                    - customColumn1
+                  compactMode: SHORT
+                  defaultFilters: "{}"
+                  defaultSelectedRow: "0"
+                  derivedColumns:
+                    customColumn1:
+                      buttonLabel: "{{EmployersTable.tableDataWithInserts.map((currentRow) => { return
+                        'Open'})}}"
+                      columnType: button
+                      computedValue: ""
+                      enableFilter: true
+                      enableSort: true
+                      headerIconPosition: LEFT
+                      horizontalAlignment: LEFT
+                      id: customColumn1
+                      imageBorderRadius:
+                        mode: px
+                        value: 0
+                      imageSize: FIT
+                      index: 19
+                      isDerived: true
+                      isEditableOnInsertion: true
+                      isVisible: true
+                      label: Open
+                      linkLabel: ""
+                      linkUrl: ""
+                      notation: standard
+                      onClick:
+                        - id: 2e0mmpvimj
+                          name: EmployerModal
+                          type: controlModal
+                        - apiNames:
+                            - SingleEmployer
+                          id: sk1smrmy66
+                          type: executeApi
+                      openImageUrl: true
+                      openInNewTab: true
+                      tagDisplayConfig: {}
+                      textSize: PARAGRAPH
+                      useLabelAsDisplayValue: true
+                      verticalAlignment: CENTER
+                      width: 150
+                  dynamicBindingPathList:
+                    - key: tableData
+                    - key: primaryColumns.company_nickname.computedValue
+                    - key: primaryColumns.company_nickname.linkUrl
+                    - key: primaryColumns.company_nickname.linkLabel
+                    - key: primaryColumns.legal_name.computedValue
+                    - key: primaryColumns.legal_name.linkUrl
+                    - key: primaryColumns.legal_name.linkLabel
+                    - key: primaryColumns.phone.computedValue
+                    - key: primaryColumns.phone.linkUrl
+                    - key: primaryColumns.phone.linkLabel
+                    - key: derivedColumns.customColumn1.buttonLabel
+                    - key: primaryColumns.customColumn1.buttonLabel
+                    - key: primaryColumns.email.computedValue
+                    - key: primaryColumns.email.linkUrl
+                    - key: primaryColumns.email.linkLabel
+                    - key: primaryColumns.first_name.computedValue
+                    - key: primaryColumns.first_name.linkUrl
+                    - key: primaryColumns.first_name.linkLabel
+                    - key: primaryColumns.last_name.computedValue
+                    - key: primaryColumns.last_name.linkUrl
+                    - key: primaryColumns.last_name.linkLabel
+                  dynamicTriggerPathList:
+                    - key: primaryColumns.customColumn1.onClick
+                  gridColumns: 85
+                  height:
+                    mode: gridUnit
+                    value: 42
+                  horizontalAlignment: LEFT
+                  isDownloadable: true
+                  isFilterable: true
+                  isLoading: false
+                  isSearchable: true
+                  isVisible: true
+                  label: Data
+                  left:
+                    mode: gridUnit
+                    value: 0
+                  pageType: NONE
+                  parentId: dwpvpsnarl
+                  primaryColumns:
+                    company_nickname:
+                      columnType: text
+                      computedValue: "{{EmployersTable.tableDataWithInserts.map((currentRow) => {
+                        return currentRow.company_nickname })}}"
+                      enableFilter: true
+                      enableSort: true
+                      headerIconPosition: LEFT
+                      horizontalAlignment: LEFT
+                      id: company_nickname
+                      imageBorderRadius:
+                        mode: px
+                        value: 0
+                      imageSize: FIT
+                      index: 1
+                      isDerived: false
+                      isEditableOnInsertion: true
+                      isVisible: true
+                      label: company_nickname
+                      linkLabel: "{{EmployersTable.tableDataWithInserts.map((currentRow) => { return
+                        currentRow.company_nickname })}}"
+                      linkUrl: "{{EmployersTable.tableDataWithInserts.map((currentRow) => { return
+                        currentRow.company_nickname })}}"
+                      notation: standard
+                      openImageUrl: true
+                      openInNewTab: true
+                      tagDisplayConfig: {}
+                      textSize: PARAGRAPH
+                      useLabelAsDisplayValue: true
+                      verticalAlignment: CENTER
+                      width: 150
+                    customColumn1:
+                      buttonLabel: "{{EmployersTable.tableDataWithInserts.map((currentRow) => { return
+                        'Open'})}}"
+                      columnType: button
+                      computedValue: ""
+                      enableFilter: true
+                      enableSort: true
+                      headerIconPosition: LEFT
+                      horizontalAlignment: LEFT
+                      id: customColumn1
+                      imageBorderRadius:
+                        mode: px
+                        value: 0
+                      imageSize: FIT
+                      index: 19
+                      isDerived: true
+                      isEditableOnInsertion: true
+                      isVisible: true
+                      label: Open
+                      linkLabel: ""
+                      linkUrl: ""
+                      notation: standard
+                      onClick:
+                        - id: 2e0mmpvimj
+                          name: EmployerModal
+                          type: controlModal
+                        - apiNames:
+                            - SingleEmployer
+                          id: sk1smrmy66
+                          type: executeApi
+                      openImageUrl: true
+                      openInNewTab: true
+                      tagDisplayConfig: {}
+                      textSize: PARAGRAPH
+                      useLabelAsDisplayValue: true
+                      verticalAlignment: CENTER
+                      width: 150
+                    email:
+                      columnType: text
+                      computedValue: "{{EmployersTable.tableDataWithInserts.map((currentRow) => {
+                        return currentRow.email })}}"
+                      enableFilter: true
+                      enableSort: true
+                      headerIconPosition: LEFT
+                      horizontalAlignment: LEFT
+                      id: email
+                      imageBorderRadius:
+                        mode: px
+                        value: 0
+                      imageSize: FIT
+                      index: 1
+                      isDerived: false
+                      isEditableOnInsertion: true
+                      isVisible: true
+                      label: email
+                      linkLabel: "{{EmployersTable.tableDataWithInserts.map((currentRow) => { return
+                        currentRow.email })}}"
+                      linkUrl: "{{EmployersTable.tableDataWithInserts.map((currentRow) => { return
+                        currentRow.email })}}"
+                      notation: standard
+                      openImageUrl: true
+                      openInNewTab: true
+                      tagDisplayConfig: {}
+                      textSize: PARAGRAPH
+                      useLabelAsDisplayValue: true
+                      verticalAlignment: CENTER
+                      width: 150
+                    first_name:
+                      columnType: text
+                      computedValue: "{{EmployersTable.tableDataWithInserts.map((currentRow) => {
+                        return currentRow.first_name })}}"
+                      enableFilter: true
+                      enableSort: true
+                      headerIconPosition: LEFT
+                      horizontalAlignment: LEFT
+                      id: first_name
+                      imageBorderRadius:
+                        mode: px
+                        value: 0
+                      imageSize: FIT
+                      index: 2
+                      isDerived: false
+                      isEditableOnInsertion: true
+                      isVisible: true
+                      label: first_name
+                      linkLabel: "{{EmployersTable.tableDataWithInserts.map((currentRow) => { return
+                        currentRow.first_name })}}"
+                      linkUrl: "{{EmployersTable.tableDataWithInserts.map((currentRow) => { return
+                        currentRow.first_name })}}"
+                      notation: standard
+                      openImageUrl: true
+                      openInNewTab: true
+                      tagDisplayConfig: {}
+                      textSize: PARAGRAPH
+                      useLabelAsDisplayValue: true
+                      verticalAlignment: CENTER
+                      width: 150
+                    last_name:
+                      columnType: text
+                      computedValue: "{{EmployersTable.tableDataWithInserts.map((currentRow) => {
+                        return currentRow.last_name })}}"
+                      enableFilter: true
+                      enableSort: true
+                      headerIconPosition: LEFT
+                      horizontalAlignment: LEFT
+                      id: last_name
+                      imageBorderRadius:
+                        mode: px
+                        value: 0
+                      imageSize: FIT
+                      index: 3
+                      isDerived: false
+                      isEditableOnInsertion: true
+                      isVisible: true
+                      label: last_name
+                      linkLabel: "{{EmployersTable.tableDataWithInserts.map((currentRow) => { return
+                        currentRow.last_name })}}"
+                      linkUrl: "{{EmployersTable.tableDataWithInserts.map((currentRow) => { return
+                        currentRow.last_name })}}"
+                      notation: standard
+                      openImageUrl: true
+                      openInNewTab: true
+                      tagDisplayConfig: {}
+                      textSize: PARAGRAPH
+                      useLabelAsDisplayValue: true
+                      verticalAlignment: CENTER
+                      width: 150
+                    legal_name:
+                      columnType: text
+                      computedValue: "{{EmployersTable.tableDataWithInserts.map((currentRow) => {
+                        return currentRow.legal_name })}}"
+                      enableFilter: true
+                      enableSort: true
+                      headerIconPosition: LEFT
+                      horizontalAlignment: LEFT
+                      id: legal_name
+                      imageBorderRadius:
+                        mode: px
+                        value: 0
+                      imageSize: FIT
+                      index: 10
+                      isDerived: false
+                      isEditableOnInsertion: true
+                      isVisible: true
+                      label: legal_name
+                      linkLabel: "{{EmployersTable.tableDataWithInserts.map((currentRow) => { return
+                        currentRow.legal_name })}}"
+                      linkUrl: "{{EmployersTable.tableDataWithInserts.map((currentRow) => { return
+                        currentRow.legal_name })}}"
+                      notation: standard
+                      openImageUrl: true
+                      openInNewTab: true
+                      tagDisplayConfig: {}
+                      textSize: PARAGRAPH
+                      useLabelAsDisplayValue: true
+                      verticalAlignment: CENTER
+                      width: 150
+                    phone:
+                      columnType: text
+                      computedValue: "{{EmployersTable.tableDataWithInserts.map((currentRow) => {
+                        return currentRow.phone })}}"
+                      enableFilter: true
+                      enableSort: true
+                      headerIconPosition: LEFT
+                      horizontalAlignment: LEFT
+                      id: phone
+                      imageBorderRadius:
+                        mode: px
+                        value: 0
+                      imageSize: FIT
+                      index: 16
+                      isDerived: false
+                      isEditableOnInsertion: true
+                      isVisible: true
+                      label: phone
+                      linkLabel: "{{EmployersTable.tableDataWithInserts.map((currentRow) => { return
+                        currentRow.phone })}}"
+                      linkUrl: "{{EmployersTable.tableDataWithInserts.map((currentRow) => { return
+                        currentRow.phone })}}"
                       notation: standard
                       openImageUrl: true
                       openInNewTab: true
@@ -1359,9 +1367,9 @@ layouts:
       type: PAGE_WIDGET
       version: 8
       widgetId: "0"
-      widgetName: Page1
+      widgetName: EmployersPage
       width:
         mode: gridUnit
         value: 0
     id: a5d75708-29bc-4f87-9670-72128ff2645d
-name: Page1
+name: EmployersPage
