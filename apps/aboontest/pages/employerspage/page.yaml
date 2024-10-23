@@ -39,8 +39,8 @@ layouts:
             SingleEmployer:
               - AllEmployers
           apiNames:
-            - AllEmployers
             - SingleEmployer
+            - AllEmployers
       canExtend: true
       children:
         - canExtend: true
@@ -1359,9 +1359,9 @@ layouts:
       type: PAGE_WIDGET
       version: 8
       widgetId: "0"
-      widgetName: Page1
+      widgetName: EmployersPage
       width:
         mode: gridUnit
         value: 0
     id: a5d75708-29bc-4f87-9670-72128ff2645d
-name: Page1
+name: EmployersPage
