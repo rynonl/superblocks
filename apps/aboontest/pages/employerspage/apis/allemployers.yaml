@@ -3,7 +3,16 @@ blocks:
     step:
       integration: f2d3c7ba-3924-4cd0-aa6b-78a28508a4fd
       postgres:
-        body: select * from employers;
+        body: |-
+          SELECT
+           e.id,
+           e.company_nickname,
+           e.legal_name,
+           em.first_name,
+           em.last_name,
+           e.phone,
+           em.email
+          from employers e inner join employer_memberships em on e.primary_contact_id = em.id;
         operation: run_sql
         usePreparedSql: true
 metadata:
