@@ -1,6 +1,6 @@
 name: Sync changes to Superblocks
- on: [push]
-
+ on:
+ - push
  jobs:
    superblocks-sync:
      runs-on: ubuntu-latest
