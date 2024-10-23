@@ -1110,7 +1110,7 @@ layouts:
                       gridColumns: 24
                       height:
                         mode: fitContent
-                        value: 4
+                        value: 2
                       isLoading: false
                       isVisible: true
                       left:

@@ -5,6 +5,7 @@ blocks:
       postgres:
         body: |-
           SELECT
+           e.id,
            e.company_nickname,
            e.legal_name,
            em.first_name,
