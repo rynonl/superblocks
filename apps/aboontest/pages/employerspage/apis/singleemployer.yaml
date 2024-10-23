@@ -3,10 +3,12 @@ blocks:
     step:
       integration: f2d3c7ba-3924-4cd0-aa6b-78a28508a4fd
       postgres:
-        body: select employers.*, plan_design_proposals.id as pdp_id from employers
-          inner join plan_design_proposals on employers.id =
-          plan_design_proposals.employer_id where
-          employers.id={{EmployersTable.selectedRow.id}} limit 1
+        body: |-
+          SELECT
+            e.*,
+            pdp.id as pdp_id,
+          	pdp.status
+          	from employers e inner join plan_design_proposals pdp on e.id = pdp.employer_id where e.id={{EmployersTable.selectedRow.id}} limit 1
         operation: run_sql
         usePreparedSql: true
 metadata:

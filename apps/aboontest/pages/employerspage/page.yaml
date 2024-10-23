@@ -1114,7 +1114,7 @@ layouts:
                       gridColumns: 24
                       height:
                         mode: fitContent
-                        value: 4
+                        value: 2
                       isLoading: false
                       isVisible: true
                       left:
@@ -1132,6 +1132,36 @@ layouts:
                       verticalAlign: AUTO
                       widgetId: p102y96jss
                       widgetName: Text2
+                      width:
+                        mode: gridUnit
+                        value: 24
+                    - animateLoading: true
+                      appMode: EDIT
+                      collapseWhenHidden: true
+                      dynamicBindingPathList:
+                        - key: text
+                      dynamicTriggerPathList: []
+                      gridColumns: 24
+                      height:
+                        mode: fitContent
+                        value: 2
+                      isLoading: false
+                      isVisible: true
+                      left:
+                        mode: gridUnit
+                        value: 0
+                      parentId: 9hkfu9mewz
+                      text: "Status: {{SingleEmployer.response[0].status}}"
+                      textAlign: LEFT
+                      textStyle: LABEL
+                      textType: text
+                      top:
+                        mode: gridUnit
+                        value: 9
+                      type: TEXT_WIDGET
+                      verticalAlign: AUTO
+                      widgetId: gwp62yqnpp
+                      widgetName: Text3
                       width:
                         mode: gridUnit
                         value: 24
