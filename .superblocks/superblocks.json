@@ -1,0 +1,12 @@
+{
+  "configType": "ROOT",
+  "metadata": {
+    "cliVersion": "1.9.0"
+  },
+  "resources": {
+    "63d454db-a7b2-42e7-a0fa-23462fa3e072": {
+      "location": "apps/aboontest",
+      "resourceType": "APPLICATION"
+    }
+  }
+}

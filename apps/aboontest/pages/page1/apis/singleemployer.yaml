@@ -1,0 +1,19 @@
+blocks:
+  - name: LoadEmployer
+    step:
+      integration: f2d3c7ba-3924-4cd0-aa6b-78a28508a4fd
+      postgres:
+        body: select employers.*, plan_design_proposals.id as pdp_id from employers
+          inner join plan_design_proposals on employers.id =
+          plan_design_proposals.employer_id where
+          employers.id={{EmployersTable.selectedRow.id}} limit 1
+        operation: run_sql
+        usePreparedSql: true
+metadata:
+  id: 398fe272-9671-4813-8032-7cbb11d24a13
+  name: SingleEmployer
+  organization: 3ca4034f-78ef-4d5e-acb2-6c6948e47fde
+trigger:
+  application:
+    id: 63d454db-a7b2-42e7-a0fa-23462fa3e072
+    pageId: 091381a9-bd98-41dd-8fbe-268e61905418

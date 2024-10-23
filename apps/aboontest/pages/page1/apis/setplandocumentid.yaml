@@ -1,0 +1,25 @@
+blocks:
+  - name: PostPandadocId
+    step:
+      integration: restapi
+      restapi:
+        bodyType: jsonBody
+        headers:
+          - key: Content-Type
+            value: application/json
+          - key: TOOLJET_BEARER_TOKEN
+            value: asdf
+        httpMethod: POST
+        params:
+          - key: pandadoc_document_id
+            value: "{{PandaDocId.value}}"
+        path: https://app.aboon.test/internal/plan_design_proposal/{{SingleEmployer.response[0].pdp_id}}/plan_documents
+        responseType: auto
+metadata:
+  id: f847f37c-146c-4fbe-a00b-325a5549b99d
+  name: SetPlanDocumentId
+  organization: 3ca4034f-78ef-4d5e-acb2-6c6948e47fde
+trigger:
+  application:
+    id: 63d454db-a7b2-42e7-a0fa-23462fa3e072
+    pageId: 091381a9-bd98-41dd-8fbe-268e61905418
